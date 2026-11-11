@@ -46,7 +46,7 @@ function Nav({ setLang }) {
       <div className="wrap flex h-[68px] items-center justify-between gap-4">
         <a href="#top" className="flex items-center gap-3 text-ink" aria-label={t({ en: 'Hinoma, home', ja: '火ノ間 ホーム' })}>
           <Seal />
-          <span className="s text-[1.3rem] leading-none">{t({ en: 'Hinoma', ja: '火ノ間' })}</span>
+          <span className="s whitespace-nowrap text-[1.3rem] leading-none">{t({ en: 'Hinoma', ja: '火ノ間' })}</span>
         </a>
         <nav aria-label={t({ en: 'Main', ja: 'メイン' })} className="hidden items-center gap-8 text-[15px] lg:flex">
           {links.map(([h, l]) => (
@@ -58,12 +58,12 @@ function Nav({ setLang }) {
         <div className="flex items-center gap-4">
           <div role="group" aria-label="Language" className="flex text-[14px]">
             {[['en', 'EN'], ['ja', '日本語']].map(([id, l]) => (
-              <button key={id} type="button" lang={id} aria-pressed={lang === id} onClick={() => setLang(id)} className={`min-h-[40px] px-2.5 transition-colors duration-150 ${lang === id ? 'text-ink underline decoration-slate underline-offset-[6px]' : 'text-muted hover:text-ink'}`}>
+              <button key={id} type="button" lang={id} aria-pressed={lang === id} onClick={() => setLang(id)} className={`min-h-[40px] whitespace-nowrap px-2.5 transition-colors duration-150 ${lang === id ? 'text-ink underline decoration-slate underline-offset-[6px]' : 'text-muted hover:text-ink'}`}>
                 {l}
               </button>
             ))}
           </div>
-          <a href="#reserve" className="btn hidden !min-h-[42px] !px-4 text-[15px] sm:inline-flex">
+          <a href="#reserve" className="btn !min-h-[42px] whitespace-nowrap !px-4 text-[15px] max-sm:!hidden">
             {t({ en: 'Reserve a piece', ja: '器を予約する' })}
           </a>
         </div>

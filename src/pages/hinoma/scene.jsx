@@ -135,7 +135,7 @@ function Lights({ warm = 0 }) {
   return (
     <>
       <hemisphereLight args={['#fff6e8', '#b9a68f', 1.15]} />
-      <directionalLight position={[-4, 6, 4]} intensity={2.6} color="#fff1dc" castShadow shadow-mapSize={[1024, 1024]} shadow-bias={-0.0004} shadow-radius={6}>
+      <directionalLight position={[-1.2, 8, 3.2]} intensity={2.6} color="#fff1dc" castShadow shadow-mapSize={[1024, 1024]} shadow-bias={-0.0004} shadow-radius={6}>
         <orthographicCamera attach="shadow-camera" args={[-5, 5, 5, -5, 0.1, 20]} />
       </directionalLight>
       <directionalLight position={[5, 2.5, -3]} intensity={0.9} color="#cfdcf0" />
@@ -149,6 +149,28 @@ function Ground({ y = 0 }) {
     <mesh rotation-x={-Math.PI / 2} position-y={y} receiveShadow>
       <planeGeometry args={[40, 40]} />
       <shadowMaterial opacity={0.16} />
+    </mesh>
+  )
+}
+
+/** A soft contact shadow: a disc with a radial falloff, lying on the floor. */
+function Blob({ y = 0, size = 3.4 }) {
+  const map = useMemo(() => {
+    const c = document.createElement('canvas')
+    c.width = c.height = 256
+    const x = c.getContext('2d')
+    const g = x.createRadialGradient(128, 128, 0, 128, 128, 128)
+    g.addColorStop(0, 'rgba(46,32,22,0.42)')
+    g.addColorStop(0.45, 'rgba(46,32,22,0.16)')
+    g.addColorStop(1, 'rgba(46,32,22,0)')
+    x.fillStyle = g
+    x.fillRect(0, 0, 256, 256)
+    return new THREE.CanvasTexture(c)
+  }, [])
+  return (
+    <mesh rotation-x={-Math.PI / 2} position={[0.25, y, -0.1]} scale={[size * 1.25, size, 1]}>
+      <planeGeometry />
+      <meshBasicMaterial map={map} transparent depthWrite={false} />
     </mesh>
   )
 }
