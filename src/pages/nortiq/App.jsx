@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { SiteSwitcher, useMockForm } from '../../shared/ui.jsx'
+import { SiteSwitcher, useMockForm, Photo, PhotoCredits } from '../../shared/ui.jsx'
+import PHOTOS from '../../shared/photos/nortiq.json'
 
 const GAP = 'clamp(0.75rem, 1.6vw, 1.5rem)'
 // x position of column line 8 inside a 12-column box
@@ -442,6 +443,10 @@ function People() {
 function Statement() {
   return (
     <section className="wrap pb-28 md:pb-40">
+      <figure className="mb-16 md:mb-24">
+        <Photo manifest={PHOTOS} name="porto" alt="Rabelo boats on the Douro with the Ribeira quarter of Porto behind" sizes="(min-width: 1320px) 1320px, 94vw" className="aspect-[2/1]" />
+        <figcaption className="label mt-3">Porto, seen from the Gaia side. The office is ten minutes up the hill.</figcaption>
+      </figure>
       <div className="cols">
         <p className="col-span-12 font-display text-[clamp(1.9rem,4.2vw,3.8rem)] leading-[1.06] tracking-[-0.03em] md:col-span-9 md:col-start-4">
           A client stays with Nortiq for 4.3 years on average, and 93 in 100 engineers are still here a year after they join. The two numbers
@@ -602,6 +607,7 @@ function Footer() {
       <p className="label mt-16 max-w-[70ch]">
         © 2026 Nortiq Engineering. Nortiq, its clients, its people and every figure on this page are fictional and exist to demonstrate a design.
       </p>
+      <PhotoCredits manifest={PHOTOS} className="label mt-4 max-w-[70ch]" />
     </footer>
   )
 }

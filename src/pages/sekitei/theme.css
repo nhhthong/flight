@@ -1,0 +1,108 @@
+@import 'tailwindcss' source(none);
+@import '../../shared/base.css';
+@source './';
+@source '../../shared';
+
+@theme {
+  --font-sans: 'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, monospace;
+  --font-jp: 'Shippori Mincho', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
+  --color-sand: oklch(92.5% 0.008 90);
+  --color-sand-2: oklch(88.5% 0.009 90);
+  --color-sand-3: oklch(83% 0.01 90);
+  --color-stone: oklch(26% 0.008 150);
+  --color-stone-2: oklch(40% 0.008 150);
+  --color-muted: oklch(50% 0.008 120);
+  --color-rule: oklch(78% 0.009 90);
+  --color-moss: oklch(46% 0.075 142);
+  --color-moss-deep: oklch(33% 0.055 145);
+}
+
+:root {
+  --gutter: clamp(1.25rem, 5vw, 5.5rem);
+}
+body {
+  background: var(--color-sand);
+  color: var(--color-stone);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+}
+::selection {
+  background: var(--color-moss);
+  color: var(--color-sand);
+}
+.wrap {
+  width: min(1320px, 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+.h {
+  font-weight: 350;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--color-muted);
+}
+.jp {
+  font-family: var(--font-jp);
+}
+.tate {
+  writing-mode: vertical-rl;
+  font-family: var(--font-jp);
+  letter-spacing: 0.35em;
+}
+.btn {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  background: var(--color-stone);
+  padding: 0 1.6rem;
+  font-weight: 500;
+  color: var(--color-sand);
+  transition: background-color 0.2s, transform 0.15s;
+}
+.btn:hover {
+  background: var(--color-moss-deep);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn-line {
+  background: transparent;
+  color: inherit;
+  box-shadow: inset 0 0 0 1px currentColor;
+}
+.btn-line:hover {
+  background: rgb(0 0 0 / 0.06);
+}
+.field {
+  min-height: 52px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--color-stone-2);
+  border-radius: 0;
+  background: transparent;
+  padding: 0.6rem 0;
+  font: 400 1.05rem var(--font-sans);
+  color: var(--color-stone);
+}
+.field:focus-visible {
+  outline: none;
+  border-bottom: 2px solid var(--color-moss);
+}
+input[type='range'] {
+  width: 100%;
+  height: 32px;
+  accent-color: var(--color-moss-deep);
+}
+.rake {
+  touch-action: none;
+  cursor: crosshair;
+}

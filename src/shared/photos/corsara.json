@@ -1,0 +1,119 @@
+{
+ "hero": {
+  "dir": "corsara",
+  "w": 1600,
+  "h": 900,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#3c4647",
+  "title": "Lamborghini Aventador SVJ 2019 grey",
+  "author": "Calreyn88",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lamborghini_Aventador_SVJ_2019_grey.jpg"
+ },
+ "sf90": {
+  "dir": "corsara",
+  "w": 1600,
+  "h": 1000,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#87707d",
+  "title": "Ferrari SF90 Stradale Mayfair",
+  "author": "Calreyn88",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ferrari_SF90_Stradale_Mayfair.jpg"
+ },
+ "svj": {
+  "dir": "corsara",
+  "w": 480,
+  "h": 300,
+  "widths": [
+   480
+  ],
+  "color": "#7d7579",
+  "title": "Lamborghini Aventador SVJ 13",
+  "author": "Calreyn88",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lamborghini_Aventador_SVJ_13.jpg"
+ },
+ "p720s": {
+  "dir": "corsara",
+  "w": 1600,
+  "h": 1000,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#828796",
+  "title": "McLaren 720S 20",
+  "author": "Calreyn88",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:McLaren_720S_20.jpg"
+ },
+ "gt3rs": {
+  "dir": "corsara",
+  "w": 1600,
+  "h": 1000,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#846569",
+  "title": "Porsche 992 GT3 RS - 2026",
+  "author": "Mustang Joe",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Porsche_992_GT3_RS_-_2026.jpg"
+ },
+ "huracan": {
+  "dir": "corsara",
+  "w": 960,
+  "h": 600,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#677482",
+  "title": "Lamborghini Huracán Tecnica 1X7A7432",
+  "author": "Alexander-93",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Lamborghini_Hurac%C3%A1n_Tecnica_1X7A7432.jpg"
+ },
+ "pista": {
+  "dir": "corsara",
+  "w": 1600,
+  "h": 1000,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#66696f",
+  "title": "Ferrari 488 Pista Blue",
+  "author": "Calreyn88",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ferrari_488_Pista_Blue.jpg"
+ },
+ "detail": {
+  "dir": "corsara",
+  "w": 1600,
+  "h": 900,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#625e5a",
+  "title": "McLaren 720S, IAA 2017, (1Y7A3406)",
+  "author": "Matti Blume",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:McLaren_720S%2C_IAA_2017%2C_%281Y7A3406%29.jpg"
+ }
+}

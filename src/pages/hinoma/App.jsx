@@ -1,7 +1,22 @@
-import { createContext, useContext, useEffect, useRef, useState } from 'react'
+import { createContext, lazy, Suspense, useContext, useEffect, useRef, useState } from 'react'
 import { useScroll, useMotionValueEvent } from 'motion/react'
-import { SiteSwitcher, useMockForm } from '../../shared/ui.jsx'
-import { HeroScene, WheelScene, ShelfScene, GLAZES } from './scene.jsx'
+import { SiteSwitcher, useMockForm, Photo, PhotoCredits } from '../../shared/ui.jsx'
+import PHOTOS from '../../shared/photos/hinoma.json'
+import { GLAZES } from './glazes.js'
+
+// three.js is the heaviest thing on the page: it loads as its own chunk after the text has painted.
+const scenes = () => import('./scene.jsx')
+const lazyScene = (name) => {
+  const C = lazy(() => scenes().then((m) => ({ default: m[name] })))
+  return ({ className, label, ...rest }) => (
+    <Suspense fallback={<div className={className} role="img" aria-label={label} />}>
+      <C className={className} label={label} {...rest} />
+    </Suspense>
+  )
+}
+const HeroScene = lazyScene('HeroScene')
+const WheelScene = lazyScene('WheelScene')
+const ShelfScene = lazyScene('ShelfScene')
 
 /* -------------------------------------------------------------- language */
 
@@ -355,6 +370,10 @@ function Visit() {
             </div>
           ))}
         </dl>
+        <div className="grid gap-4 sm:grid-cols-2 md:col-span-12 md:gap-6">
+          <Photo manifest={PHOTOS} name="wheel" alt={t({ en: 'Hands closing a cone of clay on a spinning wheel', ja: '回るろくろの上で土をしぼる手' })} sizes="(min-width: 640px) 46vw, 92vw" className="aspect-[3/2]" />
+          <Photo manifest={PHOTOS} name="drying" alt={t({ en: 'Rows of unfired pots drying in the sun on wooden racks', ja: '板の上で天日に干される素地の器' })} sizes="(min-width: 640px) 46vw, 92vw" className="aspect-[3/2]" />
+        </div>
       </div>
     </section>
   )
@@ -460,6 +479,7 @@ function Footer() {
         </div>
       </div>
       <p className="label mt-14 max-w-[70ch]">{t({ en: '© 2026 Hinoma. The pottery, its people and every figure on this page are fictional and exist to demonstrate a design.', ja: '© 2026 火ノ間。この窯元、人物、数字はすべて架空のもので、デザインの見本として制作しています。' })}</p>
+      <PhotoCredits manifest={PHOTOS} className="label mt-4 max-w-[70ch]" />
     </footer>
   )
 }

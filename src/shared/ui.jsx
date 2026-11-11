@@ -115,10 +115,14 @@ const SITES = [
   { id: 'gravon', name: 'Gravon', kind: 'Industrial robots', dot: '#eef3fb' },
   { id: 'hinoma', name: 'Hinoma', kind: 'Ceramics, EN / JP', dot: '#c9a27c' },
   { id: 'sootfox', name: 'Sootfox', kind: 'Game studio', dot: '#e0218a' },
+  { id: 'corsara', name: 'Corsara', kind: 'Supercars', dot: '#f2d34a' },
+  { id: 'shiosai', name: 'Shiosai', kind: 'Japanese dining', dot: '#d9502f' },
+  { id: 'sekitei', name: 'Sekitei', kind: 'Dry gardens', dot: '#5f8a57' },
+  { id: 'zenkai', name: 'Zenkai', kind: 'RC cars, drivable', dot: '#ff5a1f' },
 ]
 export { SITES }
 
-/** Small floating switcher that moves between the five demo sites. */
+/** Small floating switcher that moves between the demo sites. */
 export function SiteSwitcher({ current, dark = false }) {
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
@@ -139,10 +143,10 @@ export function SiteSwitcher({ current, dark = false }) {
   return (
     <div ref={ref} className="fixed bottom-4 left-4 z-[90] font-[system-ui,sans-serif] text-[13px] leading-none">
       {open && (
-        <div className={`mb-2 w-60 overflow-hidden rounded-2xl border p-1.5 shadow-2xl ${shell}`}>
+        <div className={`mb-2 max-h-[70svh] w-64 overflow-y-auto rounded-2xl border p-1.5 shadow-2xl ${shell}`}>
           <a href="../" className="flex items-center gap-2.5 rounded-xl px-3 py-2.5 hover:bg-white/10">
             <span className="grid h-2 w-2 place-items-center rounded-full bg-white" />
-            All five sites
+            All nine sites
           </a>
           {SITES.map((s) => (
             <a
@@ -198,4 +202,54 @@ export function useActiveSection(ids) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return active
+}
+
+/**
+ * A real photograph, served small: AVIF first, WebP behind it, three widths, and the box
+ * reserved before the bytes arrive so nothing shifts. `manifest` is the page's slice of photos.json.
+ * Everything loads lazily except the one photo a page marks `priority` (its first screen).
+ */
+export function Photo({ manifest, name, alt, sizes = '100vw', priority = false, className = '', imgClassName = '', style, base = '../photos/' }) {
+  const p = manifest[name]
+  if (!p) return null
+  const set = (ext) => p.widths.map((w) => `${base}${p.dir}/${name}-${w}.${ext} ${w}w`).join(', ')
+  const last = p.widths[p.widths.length - 1]
+  return (
+    <picture className={`block overflow-hidden ${className}`} style={{ backgroundColor: p.color, ...style }}>
+      <source type="image/avif" srcSet={set('avif')} sizes={sizes} />
+      <source type="image/webp" srcSet={set('webp')} sizes={sizes} />
+      <img
+        src={`${base}${p.dir}/${name}-${last}.webp`}
+        alt={alt}
+        width={p.w}
+        height={p.h}
+        loading={priority ? 'eager' : 'lazy'}
+        fetchPriority={priority ? 'high' : undefined}
+        decoding="async"
+        className={`h-full w-full object-cover ${imgClassName}`}
+        style={p.pos ? { objectPosition: p.pos } : undefined}
+      />
+    </picture>
+  )
+}
+
+/** The photographers behind a page's pictures, as the licences ask. */
+export function PhotoCredits({ manifest, className = '' }) {
+  const seen = new Set()
+  const list = Object.values(manifest).filter((p) => !seen.has(p.page) && seen.add(p.page))
+  return (
+    <details className={className}>
+      <summary className="cursor-pointer">Photo credits ({list.length})</summary>
+      <ul className="mt-3 grid gap-1.5">
+        {list.map((p) => (
+          <li key={p.page}>
+            <a href={p.page} rel="noreferrer" className="underline underline-offset-2">
+              {p.title}
+            </a>{' '}
+            by {p.author}, {p.license}, via Wikimedia Commons. Cropped and resized.
+          </li>
+        ))}
+      </ul>
+    </details>
+  )
 }

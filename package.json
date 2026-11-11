@@ -11,12 +11,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource-variable/archivo": "^5.3.0",
+    "@fontsource-variable/cormorant": "^5.3.0",
     "@fontsource-variable/fraunces": "^5.3.0",
     "@fontsource-variable/hanken-grotesk": "^5.3.0",
+    "@fontsource-variable/instrument-sans": "^5.3.0",
     "@fontsource-variable/jetbrains-mono": "^5.3.0",
     "@fontsource-variable/mona-sans": "^5.3.0",
     "@fontsource-variable/radio-canada": "^5.3.0",
     "@fontsource-variable/radio-canada-big": "^5.3.0",
+    "@fontsource-variable/red-hat-display": "^5.3.0",
+    "@fontsource-variable/red-hat-mono": "^5.3.0",
+    "@fontsource-variable/schibsted-grotesk": "^5.3.0",
     "@fontsource-variable/sofia-sans": "^5.3.0",
     "@fontsource/bowlby-one-sc": "^5.3.0",
     "@fontsource/chakra-petch": "^5.3.0",
