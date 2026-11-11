@@ -1,6 +1,8 @@
 {
   "name": "flight",
   "private": true,
+  "license": "MIT",
+  "description": "Five fictional company landing pages, each in its own design language.",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
