@@ -153,7 +153,7 @@ Each company is its own Vite entry with its own stylesheet and fonts, so no page
 
 - three.js is never in a page's first bundle. Hinoma and Zenkai load their scenes as a separate chunk after the text has painted, and a canvas only renders while it is on screen.
 - The Japanese typefaces are loaded after first paint, so their `@font-face` rules do not block rendering.
-- Photographs are AVIF with a WebP fallback at 480, 960 and 1600 px. The largest AVIF is under 200 kB. Every photo reserves its box and shows its average colour until it arrives, and all but the first screen load lazily.
+- Photographs are AVIF with a WebP fallback at 480, 960 and 1600 px. A typical 1600 px AVIF is about 100 kB; the gravel gardens compress worst and reach 400 kB. Every photo reserves its box and shows its average colour until it arrives, and all but the first screen load lazily.
 
 ## Photographs
 
