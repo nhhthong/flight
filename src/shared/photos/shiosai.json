@@ -1,0 +1,117 @@
+{
+ "hero": {
+  "dir": "shiosai",
+  "w": 1600,
+  "h": 2400,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#15110d",
+  "title": "Omakase sushi — where chef brings you the best in season, piece by piece",
+  "author": "JuanitoFatas",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Omakase_sushi_%E2%80%94_where_chef_brings_you_the_best_in_season%2C_piece_by_piece.jpg",
+  "pos": "50% 64%"
+ },
+ "nigiri": {
+  "dir": "shiosai",
+  "w": 1600,
+  "h": 2000,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#87574b",
+  "title": "Sushi - BarMasa",
+  "author": "Studio Sarah Lou",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Sushi_-_BarMasa.jpg"
+ },
+ "sashimi": {
+  "dir": "shiosai",
+  "w": 960,
+  "h": 1200,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#9b7567",
+  "title": "Jisaku Kaiseki Ryori 03",
+  "author": "Chris 73",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Jisaku_Kaiseki_Ryori_03.jpg"
+ },
+ "kaiseki": {
+  "dir": "shiosai",
+  "w": 480,
+  "h": 600,
+  "widths": [
+   480
+  ],
+  "color": "#92371d",
+  "title": "Jisaku Kaiseki Ryori 06",
+  "author": "Chris 73",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Jisaku_Kaiseki_Ryori_06.jpg"
+ },
+ "tempura": {
+  "dir": "shiosai",
+  "w": 1600,
+  "h": 2000,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#937552",
+  "title": "Tempura 003",
+  "author": "Ocdp",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Tempura_003.jpg"
+ },
+ "chirashi": {
+  "dir": "shiosai",
+  "w": 960,
+  "h": 1200,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#9a6a3b",
+  "title": "Chirashi-zushi",
+  "author": "Arashiyama",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Chirashi-zushi.jpg"
+ },
+ "wagashi": {
+  "dir": "shiosai",
+  "w": 960,
+  "h": 1200,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#41312e",
+  "title": "Matcha chawan and wagashi at teahouse in Japanese garden",
+  "author": "Laitche",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Matcha_chawan_and_wagashi_at_teahouse_in_Japanese_garden.jpg"
+ },
+ "counter": {
+  "dir": "shiosai",
+  "w": 960,
+  "h": 640,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#432f1a",
+  "title": "Dinner at the Counter (12008197506)",
+  "author": "City Foodsters",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Dinner_at_the_Counter_%2812008197506%29.jpg"
+ }
+}

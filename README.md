@@ -1,7 +1,7 @@
-<h1 align="center">Five companies, five interfaces</h1>
+<h1 align="center">Nine companies, nine interfaces</h1>
 
 <p align="center">
-  Five landing pages for five invented companies.<br />
+  Nine landing pages for nine invented companies.<br />
   Each one has its own typography, colour, layout and way of moving.
 </p>
 
@@ -18,10 +18,10 @@
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/hub-hero.jpg" alt="Home page listing the five sites" width="860" />
+  <img src="docs/screenshots/hub-hero.jpg" alt="Home page listing the nine sites" width="860" />
 </p>
 
-## The five sites
+## The nine sites
 
 Every company, person, product and figure is fictional. The contact forms are simulations and send nothing.
 
@@ -70,12 +70,48 @@ Die-cut stickers you can drag, a playable round of the studio's game, and a crew
   <img src="docs/screenshots/sootfox-scene.jpg" alt="Sootfox playable round" width="49%" />
 </p>
 
+### Corsara: supercars
+
+Full-bleed photographs and wide type on black. A stock list you can filter by maker, the makers' published figures for each model, and a loan calculator that reprices as you move the sliders.
+
+<p>
+  <img src="docs/screenshots/corsara-hero.jpg" alt="Corsara hero" width="49%" />
+  <img src="docs/screenshots/corsara-scene.jpg" alt="Corsara finance calculator" width="49%" />
+</p>
+
+### Shiosai: Japanese restaurant
+
+An eight-seat counter in Kanazawa. A menu that changes with the season you pick, vertical Japanese script, a sideways strip of dishes, and a booking form where you choose seats at the counter.
+
+<p>
+  <img src="docs/screenshots/shiosai-hero.jpg" alt="Shiosai hero" width="49%" />
+  <img src="docs/screenshots/shiosai-scene.jpg" alt="Shiosai menu" width="49%" />
+</p>
+
+### Sekitei: karesansui gardens
+
+Dry stone gardens, designed, built and kept. Stone, gravel and a lot of empty space, a patch of gravel you can rake with the pointer, and an estimator that sizes a garden.
+
+<p>
+  <img src="docs/screenshots/sekitei-hero.jpg" alt="Sekitei hero" width="49%" />
+  <img src="docs/screenshots/sekitei-scene.jpg" alt="Sekitei, the three materials" width="49%" />
+</p>
+
+### Zenkai: radio-controlled cars
+
+The first screen is a three.js yard. Press Take the wheel and drive the car with W A S D, the arrow keys or the on-screen pad: knock cones over, slide on the handbrake, collect the green cells. Each of the three models has its own speed and grip.
+
+<p>
+  <img src="docs/screenshots/zenkai-hero.jpg" alt="Zenkai hero" width="49%" />
+  <img src="docs/screenshots/zenkai-scene.jpg" alt="Zenkai, driving the car" width="49%" />
+</p>
+
 ## Stack
 
 - [React](https://react.dev) 19 and [Vite](https://vitejs.dev) in multi-page mode
 - [Tailwind CSS](https://tailwindcss.com) 4
 - [Motion](https://motion.dev) for scroll and layout animation
-- [three.js](https://threejs.org) with [React Three Fiber](https://r3f.docs.pmnd.rs) for the Hinoma scenes
+- [three.js](https://threejs.org) with [React Three Fiber](https://r3f.docs.pmnd.rs) for the Hinoma scenes and the Zenkai yard
 - Self-hosted fonts through [Fontsource](https://fontsource.org)
 
 ## Getting started
@@ -103,11 +139,33 @@ index.html              Home page
 <company>/index.html    One HTML entry per company
 src/pages/<company>/    App.jsx, theme.css, main.jsx
 src/pages/hinoma/       Also scene.jsx, the three.js scenes
-src/shared/             Shared hooks, site switcher and base styles
+src/pages/zenkai/       Also scene.jsx, the drivable yard
+src/shared/             Shared hooks, site switcher, Photo component and base styles
+src/shared/photos/      One manifest per site: sizes, placeholder colour, credits
+public/photos/          The photographs, as AVIF and WebP in three widths
+scripts/photos.py       Fetches and resizes the photographs
 docs/screenshots/       Images used in this README
 ```
 
 Each company is its own Vite entry with its own stylesheet and fonts, so no page pays for another page's code.
+
+## Loading fast
+
+- three.js is never in a page's first bundle. Hinoma and Zenkai load their scenes as a separate chunk after the text has painted, and a canvas only renders while it is on screen.
+- The Japanese typefaces are loaded after first paint, so their `@font-face` rules do not block rendering.
+- Photographs are AVIF with a WebP fallback at 480, 960 and 1600 px. The largest AVIF is under 200 kB. Every photo reserves its box and shows its average colour until it arrives, and all but the first screen load lazily.
+
+## Photographs
+
+The photographs come from [Wikimedia Commons](https://commons.wikimedia.org) under CC0, CC BY and CC BY-SA licences. Each page lists its photographers in the footer under Photo credits. They show real cars, food and gardens, not the invented companies. Orvo, Gravon and Sootfox are drawn in code on purpose and use no photographs.
+
+`scripts/photos.src.json` lists every file with its author and licence. To add or change one, edit that list and run:
+
+```bash
+python3 scripts/photos.py
+```
+
+It needs Python 3 with Pillow 11 or newer.
 
 ## Deployment
 

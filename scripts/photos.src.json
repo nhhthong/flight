@@ -1,0 +1,288 @@
+{
+ "corsara": {
+  "hero": {
+   "file": "Lamborghini Aventador SVJ 2019 grey.jpg",
+   "author": "Calreyn88",
+   "license": "CC BY-SA 4.0",
+   "ar": "16:9",
+   "focus": [
+    0.5,
+    0.55
+   ]
+  },
+  "sf90": {
+   "file": "Ferrari SF90 Stradale Mayfair.jpg",
+   "author": "Calreyn88",
+   "license": "CC BY 4.0",
+   "ar": "16:10"
+  },
+  "svj": {
+   "file": "Lamborghini Aventador SVJ 13.jpg",
+   "author": "Calreyn88",
+   "license": "CC BY-SA 4.0",
+   "ar": "16:10"
+  },
+  "p720s": {
+   "file": "McLaren 720S 20.jpg",
+   "author": "Calreyn88",
+   "license": "CC BY-SA 4.0",
+   "ar": "16:10"
+  },
+  "gt3rs": {
+   "file": "Porsche 992 GT3 RS - 2026.jpg",
+   "author": "Mustang Joe",
+   "license": "CC0",
+   "ar": "16:10",
+   "focus": [
+    0.5,
+    0.55
+   ]
+  },
+  "huracan": {
+   "file": "Lamborghini Huracán Tecnica 1X7A7432.jpg",
+   "author": "Alexander-93",
+   "license": "CC BY-SA 4.0",
+   "ar": "16:10",
+   "focus": [
+    0.45,
+    0.5
+   ]
+  },
+  "pista": {
+   "file": "Ferrari 488 Pista Blue.jpg",
+   "author": "Calreyn88",
+   "license": "CC BY 4.0",
+   "ar": "16:10"
+  },
+  "detail": {
+   "file": "McLaren 720S, IAA 2017, (1Y7A3406).jpg",
+   "author": "Matti Blume",
+   "license": "CC BY-SA 4.0",
+   "ar": "16:9",
+   "focus": [
+    0.6,
+    0.55
+   ]
+  }
+ },
+ "shiosai": {
+  "hero": {
+   "file": "Omakase sushi — where chef brings you the best in season, piece by piece.jpg",
+   "author": "JuanitoFatas",
+   "license": "CC BY-SA 4.0",
+   "pos": "50% 64%"
+  },
+  "nigiri": {
+   "file": "Sushi - BarMasa.jpg",
+   "author": "Studio Sarah Lou",
+   "license": "CC BY 2.0",
+   "ar": "4:5",
+   "focus": [
+    0.5,
+    0.55
+   ]
+  },
+  "sashimi": {
+   "file": "Jisaku Kaiseki Ryori 03.jpg",
+   "author": "Chris 73",
+   "license": "CC BY-SA 3.0",
+   "ar": "4:5"
+  },
+  "kaiseki": {
+   "file": "Jisaku Kaiseki Ryori 06.jpg",
+   "author": "Chris 73",
+   "license": "CC BY-SA 3.0",
+   "ar": "4:5",
+   "focus": [
+    0.45,
+    0.6
+   ]
+  },
+  "tempura": {
+   "file": "Tempura 003.jpg",
+   "author": "Ocdp",
+   "license": "CC0",
+   "ar": "4:5",
+   "focus": [
+    0.62,
+    0.4
+   ]
+  },
+  "chirashi": {
+   "file": "Chirashi-zushi.jpg",
+   "author": "Arashiyama",
+   "license": "CC BY-SA 3.0",
+   "ar": "4:5",
+   "focus": [
+    0.45,
+    0.5
+   ]
+  },
+  "wagashi": {
+   "file": "Matcha chawan and wagashi at teahouse in Japanese garden.jpg",
+   "author": "Laitche",
+   "license": "CC BY-SA 4.0",
+   "ar": "4:5",
+   "focus": [
+    0.38,
+    0.5
+   ]
+  },
+  "counter": {
+   "file": "Dinner at the Counter (12008197506).jpg",
+   "author": "City Foodsters",
+   "license": "CC BY 2.0",
+   "ar": "3:2"
+  }
+ },
+ "sekitei": {
+  "hero": {
+   "file": "Ninna-ji and Ryoan-ji, Kyoto - Ryoanji7753.jpg",
+   "author": "lumoplank",
+   "license": "CC0",
+   "ar": "16:9",
+   "focus": [
+    0.5,
+    0.62
+   ]
+  },
+  "stone": {
+   "file": "Kyoto Tofuku-ji Honbo-Garten 9.jpg",
+   "author": "Zairon",
+   "license": "CC BY-SA 4.0",
+   "ar": "3:4",
+   "focus": [
+    0.4,
+    0.95
+   ]
+  },
+  "gravel": {
+   "file": "Raked gravel as flowing water, Japanese garden at Kew - geograph.org.uk - 2711289.jpg",
+   "author": "David Hawgood",
+   "license": "CC BY-SA 2.0",
+   "ar": "3:4",
+   "focus": [
+    0.55,
+    0.5
+   ]
+  },
+  "moss": {
+   "file": "Ryoan-ji-Garden-2018.jpg",
+   "author": "Bjørn Christian Tørrissen",
+   "license": "CC BY-SA 4.0",
+   "ar": "3:4",
+   "focus": [
+    0.68,
+    0.9
+   ]
+  },
+  "build": {
+   "file": "Fort Worth Japanese Garden October 2019 03 (Karesansui Dry Landscape Garden).jpg",
+   "author": "Michael Barera",
+   "license": "CC BY-SA 4.0",
+   "ar": "3:2"
+  },
+  "restore": {
+   "file": "Hōkoku-ji, Rock Garden (Zen garden) 001.jpg",
+   "author": "Naokijp",
+   "license": "CC BY-SA 4.0",
+   "ar": "3:2",
+   "focus": [
+    0.5,
+    0.6
+   ]
+  },
+  "keep": {
+   "file": "Ryoan-ji, Hojo Teien (Rock Garden) -2 (April 2016) - panoramio.jpg",
+   "author": "ttshr1970",
+   "license": "CC BY 3.0",
+   "ar": "3:2"
+  },
+  "basin": {
+   "file": "Ginzanji (Osaka Tennoji-ku) Temple hdsr S5 03.jpg",
+   "author": "Hyppolyte de Saint-Rambert",
+   "license": "CC BY 4.0",
+   "ar": "4:3"
+  },
+  "ryoanji": {
+   "file": "Ryoan-ji-Garden-2018.jpg",
+   "author": "Bjørn Christian Tørrissen",
+   "license": "CC BY-SA 4.0",
+   "ar": "4:3"
+  },
+  "tofukuji": {
+   "file": "Kyoto 20101018 110138.jpg",
+   "author": "Ka23 13",
+   "license": "CC BY-SA 4.0",
+   "ar": "4:3"
+  },
+  "shodenji": {
+   "file": "Zen Garden, Shōden-ji Temple in Kyoto - 2005.jpg",
+   "author": "Nullumayulife",
+   "license": "CC BY 2.0",
+   "ar": "4:3",
+   "focus": [
+    0.5,
+    0.6
+   ]
+  }
+ },
+ "zenkai": {
+  "touring": {
+   "file": "Flickr - wbaiv - Tamiya 1-12 Porsche 935 Martini ^ Rossi.jpg",
+   "author": "Bill Abbott",
+   "license": "CC BY-SA 2.0",
+   "ar": "4:3"
+  },
+  "buggy": {
+   "file": "Nitro Buggy RC Car.jpg",
+   "author": "Quist",
+   "license": "CC BY-SA 4.0",
+   "ar": "4:3"
+  },
+  "drift": {
+   "file": "RC Drift body Toyota Chaser JZX100 by Yakuzzza.JPG",
+   "author": "Shark21",
+   "license": "CC BY-SA 3.0",
+   "ar": "4:3"
+  },
+  "bench": {
+   "file": "LRP-Offroad-Challenge Buggy 4WD.jpg",
+   "author": "Karsten Hartinger",
+   "license": "CC BY-SA 4.0",
+   "ar": "4:3"
+  },
+  "track": {
+   "file": "RC track at Brastad SK8, the new skatepark in Lysekil Municipality.jpg",
+   "author": "W.carter",
+   "license": "CC BY-SA 4.0",
+   "ar": "3:2"
+  }
+ },
+ "hinoma": {
+  "wheel": {
+   "file": "Pottery workshop at Odisha Crafts Museum 02.jpg",
+   "author": "Kritzolina",
+   "license": "CC BY-SA 4.0",
+   "ar": "3:2"
+  },
+  "drying": {
+   "file": "Onta Pottery drying in the sun.jpg",
+   "author": "STA3816",
+   "license": "CC BY-SA 3.0",
+   "ar": "3:2"
+  }
+ },
+ "nortiq": {
+  "porto": {
+   "file": "Rabelo boats and Ribeira seen from Cais de Gaia, 20250605 1623 9879.jpg",
+   "author": "Jakub Hałun",
+   "license": "CC BY 4.0",
+   "ar": "2:1",
+   "focus": [
+    0.5,
+    0.55
+   ]
+  }
+ }
+}

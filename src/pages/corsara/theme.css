@@ -1,0 +1,112 @@
+@import 'tailwindcss' source(none);
+@import '../../shared/base.css';
+@source './';
+@source '../../shared';
+
+@theme {
+  --font-sans: 'Archivo Variable', ui-sans-serif, system-ui, sans-serif;
+  --color-night: oklch(15% 0.004 285);
+  --color-night-2: oklch(19.5% 0.005 285);
+  --color-night-3: oklch(25% 0.006 285);
+  --color-bone: oklch(94% 0.012 85);
+  --color-bone-2: oklch(80% 0.012 85);
+  --color-muted: oklch(66% 0.01 85);
+  --color-rule: oklch(31% 0.006 285);
+  --color-flare: oklch(86% 0.17 96);
+}
+
+:root {
+  --gutter: clamp(1.25rem, 4vw, 4rem);
+}
+body {
+  background: var(--color-night);
+  color: var(--color-bone);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.55;
+}
+::selection {
+  background: var(--color-flare);
+  color: var(--color-night);
+}
+.wrap {
+  width: min(1480px, 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+/* Headlines use the wide cut of Archivo: low, broad, like a car seen from the front. */
+.h {
+  font-stretch: 125%;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.94;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.label {
+  font-stretch: 112%;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-muted);
+}
+.num {
+  font-stretch: 125%;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.btn {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  background: var(--color-bone);
+  padding: 0 1.5rem;
+  font-stretch: 112%;
+  font-weight: 700;
+  color: var(--color-night);
+  transition: background-color 0.15s, transform 0.15s;
+}
+.btn:hover {
+  background: var(--color-flare);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn-line {
+  background: transparent;
+  color: var(--color-bone);
+  box-shadow: inset 0 0 0 1.5px var(--color-rule);
+}
+.btn-line:hover {
+  background: var(--color-night-3);
+}
+.field {
+  min-height: 52px;
+  width: 100%;
+  border: 0;
+  border-bottom: 1.5px solid var(--color-rule);
+  background: transparent;
+  padding: 0.6rem 0;
+  font: 500 1.05rem var(--font-sans);
+  color: var(--color-bone);
+}
+.field:focus-visible {
+  outline: none;
+  border-color: var(--color-flare);
+}
+.field option {
+  color: #111;
+}
+input[type='range'] {
+  width: 100%;
+  accent-color: var(--color-flare);
+  height: 32px;
+}
+/* photo that sharpens out of the dark as it enters */
+.car-photo img {
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.car:hover .car-photo img {
+  transform: scale(1.035);
+}

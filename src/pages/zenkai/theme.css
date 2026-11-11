@@ -1,0 +1,111 @@
+@import 'tailwindcss' source(none);
+@import '../../shared/base.css';
+@source './';
+@source '../../shared';
+
+@theme {
+  --font-sans: 'Red Hat Display Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Red Hat Mono Variable', ui-monospace, monospace;
+  --color-paper: oklch(95.5% 0.008 85);
+  --color-paper-2: oklch(91.5% 0.01 85);
+  --color-ink: oklch(21% 0.012 265);
+  --color-ink-2: oklch(34% 0.012 265);
+  --color-muted: oklch(46% 0.012 265);
+  --color-rule: oklch(82% 0.01 85);
+  --color-hot: oklch(68% 0.215 41);
+  --color-hot-deep: oklch(52% 0.19 38);
+  --color-cell: oklch(90% 0.21 128);
+}
+
+:root {
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+}
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.55;
+}
+::selection {
+  background: var(--color-hot);
+  color: var(--color-ink);
+}
+.wrap {
+  width: min(1360px, 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+.h {
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  text-wrap: balance;
+}
+.mono {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.btn {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 999px;
+  background: var(--color-ink);
+  padding: 0 1.4rem;
+  font-weight: 700;
+  color: var(--color-paper);
+  transition: transform 0.15s, background-color 0.15s;
+}
+.btn:hover {
+  background: var(--color-hot-deep);
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn-hot {
+  background: var(--color-hot);
+  color: var(--color-ink);
+}
+.btn-hot:hover {
+  background: var(--color-cell);
+}
+/* the pad: keys you can also press with a thumb */
+.key {
+  display: grid;
+  height: 58px;
+  width: 58px;
+  place-items: center;
+  border-radius: 16px;
+  border: 1.5px solid rgb(255 255 255 / 0.5);
+  background: rgb(22 24 29 / 0.62);
+  color: #fff;
+  backdrop-filter: blur(8px);
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.key[data-on='true'] {
+  background: var(--color-hot);
+  color: var(--color-ink);
+  border-color: var(--color-hot);
+}
+.field {
+  min-height: 50px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1.5px solid var(--color-rule);
+  background: #fff;
+  padding: 0.7rem 0.9rem;
+  font: 500 1rem var(--font-sans);
+  color: var(--color-ink);
+}
+.field:focus-visible {
+  outline: 2px solid var(--color-hot-deep);
+  outline-offset: 1px;
+}
+.stripe {
+  background: repeating-linear-gradient(-45deg, var(--color-ink) 0 14px, var(--color-hot) 14px 28px);
+}

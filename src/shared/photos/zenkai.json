@@ -1,0 +1,75 @@
+{
+ "touring": {
+  "dir": "zenkai",
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#8c8584",
+  "title": "Flickr - wbaiv - Tamiya 1-12 Porsche 935 Martini ^ Rossi",
+  "author": "Bill Abbott",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Flickr_-_wbaiv_-_Tamiya_1-12_Porsche_935_Martini_%5E_Rossi.jpg"
+ },
+ "buggy": {
+  "dir": "zenkai",
+  "w": 960,
+  "h": 720,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#967957",
+  "title": "Nitro Buggy RC Car",
+  "author": "Quist",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Nitro_Buggy_RC_Car.jpg"
+ },
+ "drift": {
+  "dir": "zenkai",
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#71563d",
+  "title": "RC Drift body Toyota Chaser JZX100 by Yakuzzza",
+  "author": "Shark21",
+  "license": "CC BY-SA 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:RC_Drift_body_Toyota_Chaser_JZX100_by_Yakuzzza.JPG"
+ },
+ "bench": {
+  "dir": "zenkai",
+  "w": 960,
+  "h": 720,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#877a63",
+  "title": "LRP-Offroad-Challenge Buggy 4WD",
+  "author": "Karsten Hartinger",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:LRP-Offroad-Challenge_Buggy_4WD.jpg"
+ },
+ "track": {
+  "dir": "zenkai",
+  "w": 1600,
+  "h": 1067,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#76807a",
+  "title": "RC track at Brastad SK8, the new skatepark in Lysekil Municipality",
+  "author": "W.carter",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:RC_track_at_Brastad_SK8%2C_the_new_skatepark_in_Lysekil_Municipality.jpg"
+ }
+}

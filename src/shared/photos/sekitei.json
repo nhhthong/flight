@@ -1,0 +1,156 @@
+{
+ "hero": {
+  "dir": "sekitei",
+  "w": 1600,
+  "h": 900,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#8d8178",
+  "title": "Ninna-ji and Ryoan-ji, Kyoto - Ryoanji7753",
+  "author": "lumoplank",
+  "license": "CC0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ninna-ji_and_Ryoan-ji%2C_Kyoto_-_Ryoanji7753.jpg"
+ },
+ "stone": {
+  "dir": "sekitei",
+  "w": 480,
+  "h": 640,
+  "widths": [
+   480
+  ],
+  "color": "#7c7b7a",
+  "title": "Kyoto Tofuku-ji Honbo-Garten 9",
+  "author": "Zairon",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kyoto_Tofuku-ji_Honbo-Garten_9.jpg"
+ },
+ "gravel": {
+  "dir": "sekitei",
+  "w": 480,
+  "h": 640,
+  "widths": [
+   480
+  ],
+  "color": "#797673",
+  "title": "Raked gravel as flowing water, Japanese garden at Kew - geograph.org.uk - 2711289",
+  "author": "David Hawgood",
+  "license": "CC BY-SA 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Raked_gravel_as_flowing_water%2C_Japanese_garden_at_Kew_-_geograph.org.uk_-_2711289.jpg"
+ },
+ "moss": {
+  "dir": "sekitei",
+  "w": 960,
+  "h": 1280,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#67686a",
+  "title": "Ryoan-ji-Garden-2018",
+  "author": "Bjørn Christian Tørrissen",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ryoan-ji-Garden-2018.jpg"
+ },
+ "build": {
+  "dir": "sekitei",
+  "w": 1600,
+  "h": 1067,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#61615a",
+  "title": "Fort Worth Japanese Garden October 2019 03 (Karesansui Dry Landscape Garden)",
+  "author": "Michael Barera",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Fort_Worth_Japanese_Garden_October_2019_03_%28Karesansui_Dry_Landscape_Garden%29.jpg"
+ },
+ "restore": {
+  "dir": "sekitei",
+  "w": 960,
+  "h": 640,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#787c70",
+  "title": "Hōkoku-ji, Rock Garden (Zen garden) 001",
+  "author": "Naokijp",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:H%C5%8Dkoku-ji%2C_Rock_Garden_%28Zen_garden%29_001.jpg"
+ },
+ "keep": {
+  "dir": "sekitei",
+  "w": 960,
+  "h": 640,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#726f5c",
+  "title": "Ryoan-ji, Hojo Teien (Rock Garden) -2 (April 2016) - panoramio",
+  "author": "ttshr1970",
+  "license": "CC BY 3.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ryoan-ji%2C_Hojo_Teien_%28Rock_Garden%29_-2_%28April_2016%29_-_panoramio.jpg"
+ },
+ "basin": {
+  "dir": "sekitei",
+  "w": 960,
+  "h": 720,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#4f4f49",
+  "title": "Ginzanji (Osaka Tennoji-ku) Temple hdsr S5 03",
+  "author": "Hyppolyte de Saint-Rambert",
+  "license": "CC BY 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ginzanji_%28Osaka_Tennoji-ku%29_Temple_hdsr_S5_03.jpg"
+ },
+ "ryoanji": {
+  "dir": "sekitei",
+  "w": 1600,
+  "h": 1200,
+  "widths": [
+   480,
+   960,
+   1600
+  ],
+  "color": "#6f7073",
+  "title": "Ryoan-ji-Garden-2018",
+  "author": "Bjørn Christian Tørrissen",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Ryoan-ji-Garden-2018.jpg"
+ },
+ "tofukuji": {
+  "dir": "sekitei",
+  "w": 480,
+  "h": 360,
+  "widths": [
+   480
+  ],
+  "color": "#5a5955",
+  "title": "Kyoto 20101018 110138",
+  "author": "Ka23 13",
+  "license": "CC BY-SA 4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Kyoto_20101018_110138.jpg"
+ },
+ "shodenji": {
+  "dir": "sekitei",
+  "w": 960,
+  "h": 720,
+  "widths": [
+   480,
+   960
+  ],
+  "color": "#80807f",
+  "title": "Zen Garden, Shōden-ji Temple in Kyoto - 2005",
+  "author": "Nullumayulife",
+  "license": "CC BY 2.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Zen_Garden%2C_Sh%C5%8Dden-ji_Temple_in_Kyoto_-_2005.jpg"
+ }
+}

@@ -1,0 +1,2 @@
+import '@fontsource/shippori-mincho/400.css'
+import '@fontsource/shippori-mincho/500.css'
