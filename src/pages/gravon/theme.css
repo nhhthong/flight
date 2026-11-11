@@ -1,0 +1,207 @@
+@import 'tailwindcss' source(none);
+@import '../../shared/base.css';
+@source './';
+@source '../../shared';
+
+@theme {
+  --font-sans: 'IBM Plex Sans', ui-sans-serif, sans-serif;
+  --font-display: 'Chakra Petch', ui-sans-serif, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --color-paper: oklch(35% 0.105 256);
+  --color-paper-2: oklch(31% 0.1 257);
+  --color-paper-3: oklch(26.5% 0.095 258);
+  --color-ink: oklch(97% 0.012 240);
+  --color-ink-2: oklch(90% 0.025 242);
+  --color-muted: oklch(80% 0.045 244);
+  --color-rule: oklch(93% 0.02 240 / 0.85);
+  --color-rule-2: oklch(93% 0.02 240 / 0.32);
+}
+
+:root {
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --grid-1: oklch(97% 0.01 240 / 0.09);
+  --grid-2: oklch(97% 0.01 240 / 0.2);
+}
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.55;
+}
+::selection {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+.wrap {
+  width: min(1320px, 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+.h {
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.012em;
+  line-height: 1.02;
+}
+.h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  line-height: 1.1;
+}
+.num {
+  font-family: var(--font-mono);
+  font-weight: 500;
+}
+.label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+.sheet-grid {
+  background-image:
+    linear-gradient(var(--grid-2) 1px, transparent 1px), linear-gradient(90deg, var(--grid-2) 1px, transparent 1px),
+    linear-gradient(var(--grid-1) 1px, transparent 1px), linear-gradient(90deg, var(--grid-1) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  background-position: 20px 20px;
+}
+.fig {
+  position: relative;
+  border: 1px solid var(--color-rule);
+}
+.fig::after {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid var(--color-rule-2);
+  pointer-events: none;
+}
+.dim {
+  position: relative;
+  height: 1px;
+  background: var(--color-rule);
+}
+.dim::before,
+.dim::after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 1px;
+  height: 14px;
+  background: var(--color-rule);
+  transform: rotate(45deg);
+}
+.dim::before {
+  left: 0;
+}
+.dim::after {
+  right: 0;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding-inline: 1.5rem;
+  font-weight: 500;
+  border: 1px solid var(--color-rule);
+  color: var(--color-ink);
+  transition: background-color 0.15s ease-out, transform 0.1s ease-out;
+}
+.btn:hover {
+  background: var(--color-paper-3);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-1 {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  border-color: var(--color-ink);
+}
+.btn-1:hover {
+  background: var(--color-ink-2);
+}
+.lnk {
+  text-decoration: underline 1px;
+  text-underline-offset: 0.3em;
+}
+.lnk:hover {
+  text-decoration-color: transparent;
+}
+.cell {
+  border: 1px solid var(--color-rule);
+  margin: 0 -1px -1px 0;
+  padding: 0.6rem 0.9rem 0.8rem;
+}
+.cell input,
+.cell select,
+.cell textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.15rem;
+  background: transparent;
+  color: var(--color-ink);
+  font: 500 1.1rem var(--font-sans);
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  appearance: none;
+}
+.cell:focus-within {
+  background: var(--color-paper-3);
+  outline: 2px solid var(--color-ink);
+  outline-offset: -2px;
+}
+.cell ::placeholder {
+  color: oklch(80% 0.045 244 / 0.6);
+}
+.cell option {
+  color: #000;
+}
+input[type='range'] {
+  appearance: none;
+  height: 44px;
+  background: transparent;
+  width: 100%;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  height: 1px;
+  background: var(--color-rule);
+}
+input[type='range']::-moz-range-track {
+  height: 1px;
+  background: var(--color-rule);
+}
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 26px;
+  margin-top: -13px;
+  background: var(--color-ink);
+}
+input[type='range']::-moz-range-thumb {
+  width: 14px;
+  height: 26px;
+  background: var(--color-ink);
+  border: 0;
+  border-radius: 0;
+}
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.draw [pathLength] {
+  stroke-dasharray: 1;
+  animation: draw 1.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+}

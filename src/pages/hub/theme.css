@@ -1,0 +1,42 @@
+@import 'tailwindcss' source(none);
+@import '../../shared/base.css';
+@source './';
+
+@theme {
+  --font-sans: 'Hanken Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --color-ground: oklch(16% 0.006 80);
+  --color-ink: oklch(96% 0.006 80);
+  --color-muted: oklch(70% 0.01 80);
+}
+
+body {
+  background: var(--color-ground);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.5;
+}
+.wrap {
+  width: min(1320px, 100% - 2 * clamp(1.25rem, 4vw, 3.5rem));
+  margin-inline: auto;
+}
+.band {
+  display: block;
+  background: var(--bg);
+  color: var(--fg);
+  transition: padding-block 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  padding-block: clamp(1.75rem, 3.4vw, 3rem);
+}
+@media (hover: hover) {
+  .band:hover,
+  .band:focus-visible {
+    padding-block: clamp(2.75rem, 5.4vw, 5rem);
+  }
+  .band:hover .go,
+  .band:focus-visible .go {
+    transform: translateX(8px);
+  }
+}
+.go {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}

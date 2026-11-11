@@ -1,0 +1,93 @@
+@import 'tailwindcss' source(none);
+@import '../../shared/base.css';
+@source './';
+@source '../../shared';
+
+@theme {
+  --font-sans: 'Mona Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --color-paper: oklch(14% 0.048 264);
+  --color-paper-2: oklch(18.5% 0.052 264);
+  --color-paper-3: oklch(23% 0.055 264);
+  --color-ink: oklch(95% 0.016 250);
+  --color-ink-2: oklch(88% 0.05 245);
+  --color-muted: oklch(73% 0.04 256);
+  --color-rule: oklch(29% 0.058 264);
+  --color-rule-2: oklch(40% 0.06 262);
+  --color-azure: oklch(80% 0.11 230);
+  --color-azure-2: oklch(58% 0.1 236);
+  --color-azure-ink: oklch(16% 0.05 264);
+}
+
+:root {
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+}
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.6;
+}
+::selection {
+  background: var(--color-azure);
+  color: var(--color-azure-ink);
+}
+.wrap {
+  width: min(1320px, 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+.h {
+  font-weight: 300;
+  font-stretch: 125%;
+  letter-spacing: -0.015em;
+  line-height: 1.04;
+}
+.fig {
+  font-weight: 300;
+  font-stretch: 125%;
+  letter-spacing: -0.03em;
+  line-height: 0.9;
+  font-variant-numeric: tabular-nums;
+}
+.label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding-inline: 1.5rem;
+  font-weight: 500;
+  background: var(--color-azure);
+  color: var(--color-azure-ink);
+  transition: background-color 0.15s ease-out, transform 0.1s ease-out;
+}
+.btn:hover {
+  background: var(--color-ink);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.btn-2 {
+  background: transparent;
+  color: var(--color-ink);
+  box-shadow: inset 0 0 0 1px var(--color-rule-2);
+}
+.btn-2:hover {
+  background: var(--color-paper-3);
+}
+.p3d {
+  transform-style: preserve-3d;
+}
+.face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+@keyframes twinkle {
+  50% {
+    opacity: 0.3;
+  }
+}

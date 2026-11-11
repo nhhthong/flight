@@ -1,0 +1,140 @@
+@import 'tailwindcss' source(none);
+@import '../../shared/base.css';
+@source './';
+@source '../../shared';
+
+@theme {
+  --font-sans: 'Radio Canada Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Radio Canada Big Variable', ui-sans-serif, system-ui, sans-serif;
+  --color-paper: oklch(97.5% 0.005 90);
+  --color-paper-2: oklch(94.2% 0.006 90);
+  --color-paper-3: oklch(90.5% 0.008 90);
+  --color-ink: oklch(19% 0.022 266);
+  --color-ink-2: oklch(31% 0.02 266);
+  --color-muted: oklch(47% 0.016 266);
+  --color-rule: oklch(87.5% 0.008 90);
+  --color-field: oklch(44% 0.2 266);
+  --color-mark: oklch(57% 0.215 29);
+}
+
+:root {
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+}
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.5;
+}
+::selection {
+  background: var(--color-mark);
+  color: var(--color-paper);
+}
+.wrap {
+  width: min(1360px, 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+.cols {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(0.75rem, 1.6vw, 1.5rem);
+}
+.d {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+.poster {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+  font-size: clamp(3.4rem, 10.2vw, 10rem);
+}
+.label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding-inline: 1.5rem;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-weight: 500;
+  transition: background-color 0.15s ease-out, transform 0.1s ease-out;
+}
+.btn:hover {
+  background: var(--color-ink-2);
+}
+.btn:active {
+  transform: translateY(1px);
+}
+.lnk {
+  text-decoration: underline 1px;
+  text-underline-offset: 0.32em;
+  transition: color 0.15s ease-out;
+}
+.lnk:hover {
+  color: var(--color-mark);
+}
+.on-field .lnk:hover {
+  color: inherit;
+  text-decoration-thickness: 2px;
+}
+/* range slider on the red field */
+input[type='range'].rng {
+  appearance: none;
+  width: 100%;
+  height: 44px;
+  background: transparent;
+}
+.rng::-webkit-slider-runnable-track {
+  height: 2px;
+  background: currentColor;
+}
+.rng::-moz-range-track {
+  height: 2px;
+  background: currentColor;
+}
+.rng::-webkit-slider-thumb {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  margin-top: -13px;
+  background: var(--color-paper);
+  border: 0;
+  border-radius: 0;
+}
+.rng::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  background: var(--color-paper);
+  border: 0;
+  border-radius: 0;
+}
+@keyframes rise {
+  from {
+    transform: translateY(105%);
+  }
+}
+.rise > span {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  margin-bottom: -0.08em;
+}
+.rise > span > span {
+  display: block;
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise > span:nth-child(2) > span {
+  animation-delay: 0.08s;
+}
+.rise > span:nth-child(3) > span {
+  animation-delay: 0.16s;
+}
